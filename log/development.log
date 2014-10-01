@@ -1,0 +1,643 @@
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-18 13:55:11 +0200
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 971ms (Views: 960.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-08-18 13:55:12 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-18 13:55:12 +0200
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-08-18 13:55:12 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-18 13:55:12 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-18 13:55:12 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-18 13:55:12 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-18 13:55:12 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-18 14:03:32 +0200
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+Completed 500 Internal Server Error in 22ms
+
+ActionView::Template::Error (File to import not found or unreadable: bootstrap.
+Load paths:
+  /githubpages/my_page/girlIT.github.io/nina_hub/app/assets/images
+  /githubpages/my_page/girlIT.github.io/nina_hub/app/assets/javascripts
+  /githubpages/my_page/girlIT.github.io/nina_hub/app/assets/stylesheets
+  /githubpages/my_page/girlIT.github.io/nina_hub/vendor/assets/javascripts
+  /githubpages/my_page/girlIT.github.io/nina_hub/vendor/assets/stylesheets
+  /Users/ninastache/.rvm/gems/ruby-2.1.2/gems/turbolinks-2.2.2/lib/assets/javascripts
+  /Users/ninastache/.rvm/gems/ruby-2.1.2/gems/jquery-rails-3.1.1/vendor/assets/javascripts
+  /Users/ninastache/.rvm/gems/ruby-2.1.2/gems/coffee-rails-4.0.1/lib/assets/javascripts
+  (in /githubpages/my_page/girlIT.github.io/nina_hub/app/assets/stylesheets/nina_hub.css.scss:1)):
+    2: <html>
+    3: <head>
+    4:   <title>NinaHub</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  app/assets/stylesheets/nina_hub.css.scss:1
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb__1152050167765816474_70304701991820'
+
+
+  Rendered /Users/ninastache/.rvm/gems/ruby-2.1.2@global/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/ninastache/.rvm/gems/ruby-2.1.2@global/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/ninastache/.rvm/gems/ruby-2.1.2@global/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (23.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-18 14:04:15 +0200
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 1496ms (Views: 1487.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-08-18 14:04:16 +0200
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-08-18 14:04:16 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-18 14:04:16 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-18 14:04:16 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-18 14:04:16 +0200
+
+
+Started GET "/assets/nina_hub.css?body=1" for 127.0.0.1 at 2014-08-18 14:04:16 +0200
+  [1m[36m (1.1ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.1ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateProjects (20140818122853)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.9ms)[0m  CREATE TABLE "projects" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "picture" varchar(255), "description" text, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20140818122853"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-18 14:30:04 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 118ms (Views: 116.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-18 14:30:04 +0200
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2014-08-18 14:30:04 +0200
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-08-18 14:30:04 +0200
+
+
+Started GET "/assets/nina_hub.css?body=1" for 127.0.0.1 at 2014-08-18 14:30:04 +0200
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-08-18 14:30:04 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-18 14:30:04 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-18 14:30:04 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-18 14:30:06 +0200
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 11ms (Views: 9.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-08-18 14:30:06 +0200
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-08-18 14:30:06 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-18 14:30:06 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-18 14:30:06 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-18 14:30:06 +0200
+
+
+Started GET "/assets/nina_hub.css?body=1" for 127.0.0.1 at 2014-08-18 14:30:06 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-18 14:30:33 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 75ms (Views: 62.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-08-18 14:30:34 +0200
+
+
+Started GET "/assets/nina_hub.css?body=1" for 127.0.0.1 at 2014-08-18 14:30:34 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-18 14:30:34 +0200
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2014-08-18 14:30:34 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-18 14:30:34 +0200
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-08-18 14:30:34 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-18 14:30:34 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-18 14:31:18 +0200
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 10ms (Views: 8.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-08-18 14:31:18 +0200
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-08-18 14:31:18 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-18 14:31:18 +0200
+
+
+Started GET "/assets/nina_hub.css?body=1" for 127.0.0.1 at 2014-08-18 14:31:18 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-18 14:31:18 +0200
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2014-08-18 14:31:18 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-18 14:31:18 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-18 14:31:27 +0200
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-18 14:31:27 +0200
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-08-18 14:31:27 +0200
+
+
+Started GET "/assets/nina_hub.css?body=1" for 127.0.0.1 at 2014-08-18 14:31:27 +0200
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-08-18 14:31:27 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-18 14:31:27 +0200
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2014-08-18 14:31:27 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-18 14:31:27 +0200
+
+
+Started GET "/projects" for 127.0.0.1 at 2014-08-18 14:31:46 +0200
+Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.2ms)[0m  SELECT "projects".* FROM "projects"
+  Rendered projects/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 13ms (Views: 9.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-18 14:31:46 +0200
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-08-18 14:31:46 +0200
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2014-08-18 14:31:46 +0200
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-08-18 14:31:46 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-18 14:31:46 +0200
+
+
+Started GET "/assets/nina_hub.css?body=1" for 127.0.0.1 at 2014-08-18 14:31:46 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-18 14:31:46 +0200
+
+
+Started GET "/projects" for 127.0.0.1 at 2014-08-18 14:35:56 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.2ms)[0m  SELECT "projects".* FROM "projects"
+  Rendered projects/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 64ms (Views: 50.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-08-18 14:35:57 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-18 14:35:57 +0200
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2014-08-18 14:35:57 +0200
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-08-18 14:35:57 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-18 14:35:57 +0200
+
+
+Started GET "/assets/nina_hub.css?body=1" for 127.0.0.1 at 2014-08-18 14:35:57 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-18 14:35:57 +0200
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2014-08-18 14:35:59 +0200
+Processing by ProjectsController#new as HTML
+  Rendered projects/_form.html.erb (4.6ms)
+  Rendered projects/new.html.erb within layouts/application (17.3ms)
+Completed 500 Internal Server Error in 24ms
+
+ActionView::Template::Error (undefined method `model_name' for Class:Class):
+    1: <%= semantic_form_for @origami do |f| %>
+    2:   <%= f.semantic_errors %>
+    3:   <%= f.inputs do %>
+    4:     <%= f.input :name,   :hint => "Enter the projects name" %>
+  app/views/projects/_form.html.erb:1:in `_app_views_projects__form_html_erb__1340258887315078973_70219131304040'
+  app/views/projects/new.html.erb:3:in `_app_views_projects_new_html_erb__3113883402515401639_70219131070720'
+
+
+  Rendered /Users/ninastache/.rvm/gems/ruby-2.1.2@global/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/ninastache/.rvm/gems/ruby-2.1.2@global/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/ninastache/.rvm/gems/ruby-2.1.2@global/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (14.0ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2014-08-18 14:35:59 +0200
+Processing by ProjectsController#new as HTML
+  Rendered projects/_form.html.erb (2.3ms)
+  Rendered projects/new.html.erb within layouts/application (3.7ms)
+Completed 500 Internal Server Error in 10ms
+
+ActionView::Template::Error (undefined method `model_name' for Class:Class):
+    1: <%= semantic_form_for @origami do |f| %>
+    2:   <%= f.semantic_errors %>
+    3:   <%= f.inputs do %>
+    4:     <%= f.input :name,   :hint => "Enter the projects name" %>
+  app/views/projects/_form.html.erb:1:in `_app_views_projects__form_html_erb__1340258887315078973_70219126957480'
+  app/views/projects/new.html.erb:3:in `_app_views_projects_new_html_erb__3113883402515401639_70219126946800'
+
+
+  Rendered /Users/ninastache/.rvm/gems/ruby-2.1.2@global/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/ninastache/.rvm/gems/ruby-2.1.2@global/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/ninastache/.rvm/gems/ruby-2.1.2@global/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (16.4ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2014-08-18 14:36:21 +0200
+Processing by ProjectsController#new as HTML
+  Rendered projects/_form.html.erb (62.1ms)
+  Rendered projects/new.html.erb within layouts/application (63.5ms)
+Completed 500 Internal Server Error in 68ms
+
+ActionView::Template::Error (undefined method `artist' for #<Project:0x007fba55f69db8>):
+    2:   <%= f.semantic_errors %>
+    3:   <%= f.inputs do %>
+    4:     <%= f.input :name,   :hint => "Enter the projects name" %>
+    5:     <%= f.input :artist, :hint => "Enter the company's name" %>
+    6:   <% end %>
+    7:   <%= f.buttons do %>
+    8:     <%= f.commit_button :button_html => {:class => "primary"} %>
+  app/views/projects/_form.html.erb:5:in `block (2 levels) in _app_views_projects__form_html_erb__1340258887315078973_70219141448260'
+  app/views/projects/_form.html.erb:3:in `block in _app_views_projects__form_html_erb__1340258887315078973_70219141448260'
+  app/views/projects/_form.html.erb:1:in `_app_views_projects__form_html_erb__1340258887315078973_70219141448260'
+  app/views/projects/new.html.erb:3:in `_app_views_projects_new_html_erb__3113883402515401639_70219126946800'
+
+
+  Rendered /Users/ninastache/.rvm/gems/ruby-2.1.2@global/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/ninastache/.rvm/gems/ruby-2.1.2@global/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/ninastache/.rvm/gems/ruby-2.1.2@global/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (15.1ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2014-08-18 14:37:19 +0200
+Processing by ProjectsController#new as HTML
+  Rendered projects/_form.html.erb (29.5ms)
+  Rendered projects/new.html.erb within layouts/application (30.7ms)
+Completed 500 Internal Server Error in 38ms
+
+ActionView::Template::Error (undefined method `buttons' for #<FormtasticBootstrap::FormBuilder:0x007fba55385f60>):
+    4:     <%= f.input :name,   :hint => "Enter the projects name" %>
+    5:     <%= f.input :description, :hint => "Enter the projects's description" %>
+    6:   <% end %>
+    7:   <%= f.buttons do %>
+    8:     <%= f.commit_button :button_html => {:class => "primary"} %>
+    9:   <% end %>
+   10: <% end %>
+  app/views/projects/_form.html.erb:7:in `block in _app_views_projects__form_html_erb__1340258887315078973_70219131849820'
+  app/views/projects/_form.html.erb:1:in `_app_views_projects__form_html_erb__1340258887315078973_70219131849820'
+  app/views/projects/new.html.erb:3:in `_app_views_projects_new_html_erb__3113883402515401639_70219126946800'
+
+
+  Rendered /Users/ninastache/.rvm/gems/ruby-2.1.2@global/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/ninastache/.rvm/gems/ruby-2.1.2@global/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/ninastache/.rvm/gems/ruby-2.1.2@global/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (16.0ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2014-08-18 14:38:42 +0200
+Processing by ProjectsController#new as HTML
+  Rendered projects/_form.html.erb (22.0ms)
+  Rendered projects/new.html.erb within layouts/application (23.1ms)
+Completed 500 Internal Server Error in 27ms
+
+ActionView::Template::Error (undefined method `buttons' for #<FormtasticBootstrap::FormBuilder:0x007fba59813b50>):
+     5:     <%= f.input :description, :hint => "Enter the projects's description" %>
+     6:     <%= f.input :picture, :hint => "Add a picture" %>
+     7:   <% end %>
+     8:   <%= f.buttons do %>
+     9:     <%= f.commit_button :button_html => {:class => "primary"} %>
+    10:   <% end %>
+    11: <% end %>
+  app/views/projects/_form.html.erb:8:in `block in _app_views_projects__form_html_erb__1340258887315078973_70219171126360'
+  app/views/projects/_form.html.erb:1:in `_app_views_projects__form_html_erb__1340258887315078973_70219171126360'
+  app/views/projects/new.html.erb:3:in `_app_views_projects_new_html_erb__3113883402515401639_70219126946800'
+
+
+  Rendered /Users/ninastache/.rvm/gems/ruby-2.1.2@global/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/ninastache/.rvm/gems/ruby-2.1.2@global/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/ninastache/.rvm/gems/ruby-2.1.2@global/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (16.2ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2014-08-18 14:40:10 +0200
+Processing by ProjectsController#new as HTML
+  Rendered projects/_form.html.erb (23.3ms)
+  Rendered projects/new.html.erb within layouts/application (24.8ms)
+Completed 500 Internal Server Error in 29ms
+
+ActionView::Template::Error (undefined method `buttons' for #<FormtasticBootstrap::FormBuilder:0x007fba589fe9e8>):
+     5:     <%= f.input :description, :hint => "Enter the projects's description" %>
+     6:     <%= f.input :picture, :hint => "Add a picture" %>
+     7:   <% end %>
+     8:   <%= f.buttons do %>
+     9:     <%= f.commit_button :button_html => {:class => "primary"} %>
+    10:   <% end %>
+    11: <% end %>
+  app/views/projects/_form.html.erb:8:in `block in _app_views_projects__form_html_erb__1340258887315078973_70219171126360'
+  app/views/projects/_form.html.erb:1:in `_app_views_projects__form_html_erb__1340258887315078973_70219171126360'
+  app/views/projects/new.html.erb:3:in `_app_views_projects_new_html_erb__3113883402515401639_70219126946800'
+
+
+  Rendered /Users/ninastache/.rvm/gems/ruby-2.1.2@global/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/ninastache/.rvm/gems/ruby-2.1.2@global/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/ninastache/.rvm/gems/ruby-2.1.2@global/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (11.1ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2014-08-18 14:40:25 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProjectsController#new as HTML
+  Rendered projects/_form.html.erb (54.0ms)
+  Rendered projects/new.html.erb within layouts/application (57.7ms)
+Completed 500 Internal Server Error in 74ms
+
+ActionView::Template::Error (undefined method `buttons' for #<FormtasticBootstrap::FormBuilder:0x007f9c87427090>):
+     5:     <%= f.input :description, :hint => "Enter the projects's description" %>
+     6:     <%= f.input :picture, :hint => "Add a picture" %>
+     7:   <% end %>
+     8:   <%= f.buttons do %>
+     9:     <%= f.commit_button :button_html => {:class => "primary"} %>
+    10:   <% end %>
+    11: <% end %>
+  app/views/projects/_form.html.erb:8:in `block in _app_views_projects__form_html_erb__2970078408513657731_70155130286760'
+  app/views/projects/_form.html.erb:1:in `_app_views_projects__form_html_erb__2970078408513657731_70155130286760'
+  app/views/projects/new.html.erb:3:in `_app_views_projects_new_html_erb___2517576774245042390_70155130153220'
+
+
+  Rendered /Users/ninastache/.rvm/gems/ruby-2.1.2@global/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/ninastache/.rvm/gems/ruby-2.1.2@global/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/ninastache/.rvm/gems/ruby-2.1.2@global/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (13.6ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2014-08-18 14:40:29 +0200
+Processing by ProjectsController#new as HTML
+  Rendered projects/_form.html.erb (22.8ms)
+  Rendered projects/new.html.erb within layouts/application (23.7ms)
+Completed 500 Internal Server Error in 27ms
+
+ActionView::Template::Error (undefined method `buttons' for #<FormtasticBootstrap::FormBuilder:0x007f9c87679b18>):
+     5:     <%= f.input :description, :hint => "Enter the projects's description" %>
+     6:     <%= f.input :picture, :hint => "Add a picture" %>
+     7:   <% end %>
+     8:   <%= f.buttons do %>
+     9:     <%= f.commit_button :button_html => {:class => "primary"} %>
+    10:   <% end %>
+    11: <% end %>
+  app/views/projects/_form.html.erb:8:in `block in _app_views_projects__form_html_erb__2970078408513657731_70155130286760'
+  app/views/projects/_form.html.erb:1:in `_app_views_projects__form_html_erb__2970078408513657731_70155130286760'
+  app/views/projects/new.html.erb:3:in `_app_views_projects_new_html_erb___2517576774245042390_70155130153220'
+
+
+  Rendered /Users/ninastache/.rvm/gems/ruby-2.1.2@global/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/ninastache/.rvm/gems/ruby-2.1.2@global/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/ninastache/.rvm/gems/ruby-2.1.2@global/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (11.9ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2014-08-18 15:19:37 +0200
+
+LoadError (cannot load such file -- /githubpages/my_page/girlIT.github.io/nina_hub/config/routes.rb):
+  activesupport (4.1.4) lib/active_support/dependencies.rb:241:in `load'
+  activesupport (4.1.4) lib/active_support/dependencies.rb:241:in `block in load'
+  activesupport (4.1.4) lib/active_support/dependencies.rb:232:in `load_dependency'
+  activesupport (4.1.4) lib/active_support/dependencies.rb:241:in `load'
+  railties (4.1.4) lib/rails/application/routes_reloader.rb:40:in `block in load_paths'
+  railties (4.1.4) lib/rails/application/routes_reloader.rb:40:in `each'
+  railties (4.1.4) lib/rails/application/routes_reloader.rb:40:in `load_paths'
+  railties (4.1.4) lib/rails/application/routes_reloader.rb:16:in `reload!'
+  railties (4.1.4) lib/rails/application/routes_reloader.rb:26:in `block in updater'
+  activesupport (4.1.4) lib/active_support/file_update_checker.rb:75:in `call'
+  activesupport (4.1.4) lib/active_support/file_update_checker.rb:75:in `execute'
+  railties (4.1.4) lib/rails/application/routes_reloader.rb:7:in `execute'
+  railties (4.1.4) lib/rails/application/finisher.rb:83:in `block (2 levels) in <module:Finisher>'
+  activesupport (4.1.4) lib/active_support/callbacks.rb:438:in `instance_exec'
+  activesupport (4.1.4) lib/active_support/callbacks.rb:438:in `block in make_lambda'
+  activesupport (4.1.4) lib/active_support/callbacks.rb:184:in `call'
+  activesupport (4.1.4) lib/active_support/callbacks.rb:184:in `block in simple'
+  activesupport (4.1.4) lib/active_support/callbacks.rb:185:in `call'
+  activesupport (4.1.4) lib/active_support/callbacks.rb:185:in `block in simple'
+  activesupport (4.1.4) lib/active_support/callbacks.rb:185:in `call'
+  activesupport (4.1.4) lib/active_support/callbacks.rb:185:in `block in simple'
+  activesupport (4.1.4) lib/active_support/callbacks.rb:86:in `call'
+  activesupport (4.1.4) lib/active_support/callbacks.rb:86:in `run_callbacks'
+  actionpack (4.1.4) lib/action_dispatch/middleware/reloader.rb:83:in `prepare!'
+  actionpack (4.1.4) lib/action_dispatch/middleware/reloader.rb:71:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.4) lib/rails/engine.rb:514:in `call'
+  railties (4.1.4) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/ninastache/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/ninastache/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/ninastache/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/ninastache/.rvm/gems/ruby-2.1.2@global/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/ninastache/.rvm/gems/ruby-2.1.2@global/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/ninastache/.rvm/gems/ruby-2.1.2@global/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/ninastache/.rvm/gems/ruby-2.1.2@global/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (23.3ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2014-08-18 15:20:47 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProjectsController#new as HTML
+  Rendered projects/_form.html.erb (27.6ms)
+  Rendered projects/new.html.erb within layouts/application (33.8ms)
+Completed 200 OK in 147ms (Views: 132.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-08-18 15:20:48 +0200
+
+
+Started GET "/assets/nina_hub.css?body=1" for 127.0.0.1 at 2014-08-18 15:20:48 +0200
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-08-18 15:20:48 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-18 15:20:48 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-18 15:20:48 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-18 15:20:48 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-18 15:20:48 +0200
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-08-18 15:20:48 +0200
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2014-08-18 15:20:48 +0200
+
+
+Started GET "/projects" for 127.0.0.1 at 2014-08-18 15:20:55 +0200
+Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.2ms)[0m  SELECT "projects".* FROM "projects"
+  Rendered projects/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 15ms (Views: 13.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2014-08-25 10:22:43 +0200
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (2.6ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 125ms (Views: 107.1ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-08-25 10:22:43 +0200
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-08-25 10:22:43 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-25 10:22:43 +0200
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-08-25 10:22:43 +0200
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2014-08-25 10:22:43 +0200
+
+
+Started GET "/assets/nina_hub.css?body=1" for 127.0.0.1 at 2014-08-25 10:22:43 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-25 10:22:43 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-25 10:22:43 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-25 10:22:43 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-25 10:22:43 +0200
+
+
+Started GET "/projects" for 127.0.0.1 at 2014-08-25 10:28:00 +0200
+Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.4ms)[0m  SELECT "projects".* FROM "projects"
+  Rendered projects/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 43ms (Views: 41.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-08-25 10:28:00 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-25 10:28:00 +0200
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2014-08-25 10:28:00 +0200
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-08-25 10:28:00 +0200
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-08-25 10:28:00 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-25 10:28:00 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-25 10:28:00 +0200
+
+
+Started GET "/assets/nina_hub.css?body=1" for 127.0.0.1 at 2014-08-25 10:28:00 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-25 10:28:00 +0200
